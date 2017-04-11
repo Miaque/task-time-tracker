@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+
+    <persistence-unit name="tttPU" transaction-type="JTA">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>com.demo.tttracker.domain.Company</class>
+        <class>com.demo.tttracker.domain.Project</class>
+        <class>com.demo.tttracker.domain.Task</class>
+        <class>com.demo.tttracker.domain.TaskLog</class>
+        <class>com.demo.tttracker.domain.User</class>
+        <class>com.demo.tttracker.domain.UserLog</class>
+        <properties>
+            <property name="eclipselink.jdbc.url" value="jdbc:mysql://localhost:3306/task_time_tracker"/>
+            <property name="eclipselink.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="eclipselink.jdbc.user" value=""/>
+            <property name="eclipselink.jdbc.password" value=""/>
+        </properties>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+    </persistence-unit>
+</persistence>
